@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IKi-yK-gZy">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Search View Controller-->
+        <scene sceneID="DTR-LB-jQJ">
+            <objects>
+                <viewController storyboardIdentifier="SearchViewController" id="IKi-yK-gZy" customClass="SearchViewController" customModule="MovieeeRx" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="f9I-H3-7gy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mR7-bF-ZsP">
+                                <rect key="frame" x="362" y="65" width="44" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="7Zn-74-bdM"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="c5z-yL-rpl"/>
+                                    <constraint firstAttribute="height" constant="45" id="jm1-Rw-FHc"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" backgroundImage="magnifyingglass" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24"/>
+                                </state>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search Name..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gYE-bQ-RSj">
+                                <rect key="frame" x="44" y="82" width="310" height="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" returnKeyType="search" enablesReturnKeyAutomatically="YES" textContentType="name"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N01-4L-hqo">
+                                <rect key="frame" x="16" y="48" width="63.5" height="22"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title=" Back">
+                                    <imageReference key="image" image="chevron.backward" catalog="system" symbolScale="large"/>
+                                </state>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yQl-D2-QwZ" userLabel="Line">
+                                <rect key="frame" x="44" y="107" width="310" height="1"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="dbh-xx-fmY"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="5RL-um-gxQ">
+                                <rect key="frame" x="0.0" y="147" width="414" height="715"/>
+                                <color key="backgroundColor" red="0.091015182439999995" green="0.009294928983" blue="0.17987787720000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="separatorColor" red="0.091015182439999995" green="0.009294928983" blue="0.17987787720000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <sections/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="SZb-mi-eB9"/>
+                        <color key="backgroundColor" red="0.091015182439999995" green="0.009294928983" blue="0.17987787720000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="gYE-bQ-RSj" firstAttribute="top" secondItem="N01-4L-hqo" secondAttribute="bottom" constant="12" id="3oo-Hb-8GE"/>
+                            <constraint firstItem="yQl-D2-QwZ" firstAttribute="leading" secondItem="gYE-bQ-RSj" secondAttribute="leading" id="7B7-N3-gbc"/>
+                            <constraint firstItem="gYE-bQ-RSj" firstAttribute="leading" secondItem="f9I-H3-7gy" secondAttribute="leading" constant="44" id="Gix-cB-07L"/>
+                            <constraint firstItem="5RL-um-gxQ" firstAttribute="bottom" secondItem="SZb-mi-eB9" secondAttribute="bottom" id="H6A-B9-EhD"/>
+                            <constraint firstItem="5RL-um-gxQ" firstAttribute="bottom" secondItem="SZb-mi-eB9" secondAttribute="bottom" id="HtS-Y0-rF0"/>
+                            <constraint firstItem="mR7-bF-ZsP" firstAttribute="leading" secondItem="gYE-bQ-RSj" secondAttribute="trailing" constant="8" id="RzA-ze-OA4"/>
+                            <constraint firstItem="mR7-bF-ZsP" firstAttribute="top" secondItem="f9I-H3-7gy" secondAttribute="top" constant="64" id="dW2-mU-xuw"/>
+                            <constraint firstItem="N01-4L-hqo" firstAttribute="top" secondItem="f9I-H3-7gy" secondAttribute="top" constant="48" id="eiK-GW-U5R"/>
+                            <constraint firstItem="SZb-mi-eB9" firstAttribute="trailing" secondItem="mR7-bF-ZsP" secondAttribute="trailing" constant="8" id="lOf-xK-1Cb"/>
+                            <constraint firstItem="5RL-um-gxQ" firstAttribute="leading" secondItem="SZb-mi-eB9" secondAttribute="leading" id="maO-EO-PXm"/>
+                            <constraint firstItem="yQl-D2-QwZ" firstAttribute="trailing" secondItem="gYE-bQ-RSj" secondAttribute="trailing" id="n2A-gj-utS"/>
+                            <constraint firstItem="N01-4L-hqo" firstAttribute="leading" secondItem="SZb-mi-eB9" secondAttribute="leading" constant="16" id="s5U-Ci-10h"/>
+                            <constraint firstItem="5RL-um-gxQ" firstAttribute="trailing" secondItem="SZb-mi-eB9" secondAttribute="trailing" id="u7u-zA-djM"/>
+                            <constraint firstItem="yQl-D2-QwZ" firstAttribute="top" secondItem="gYE-bQ-RSj" secondAttribute="bottom" id="uUr-It-lJ7"/>
+                            <constraint firstItem="5RL-um-gxQ" firstAttribute="top" secondItem="gYE-bQ-RSj" secondAttribute="bottom" constant="40" id="yxt-79-xA3"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <connections>
+                        <outlet property="backButton" destination="N01-4L-hqo" id="YYA-Qc-GtD"/>
+                        <outlet property="notFoundView" destination="U3m-Hd-kNY" id="YCO-fb-Nlr"/>
+                        <outlet property="searchButton" destination="mR7-bF-ZsP" id="HFY-Nn-HyE"/>
+                        <outlet property="searchTextField" destination="gYE-bQ-RSj" id="7OH-ZM-9vO"/>
+                        <outlet property="tableView" destination="5RL-um-gxQ" id="aUE-Jl-uOU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WQI-v1-xmu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="U3m-Hd-kNY">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Film Not Found" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aOX-sv-meP">
+                            <rect key="frame" x="47" y="52" width="146" height="24"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <viewLayoutGuide key="safeArea" id="fXt-N6-vNJ"/>
+                    <color key="backgroundColor" red="0.090937830509999998" green="0.0175697878" blue="0.1758125126" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="aOX-sv-meP" firstAttribute="centerY" secondItem="U3m-Hd-kNY" secondAttribute="centerY" id="DDm-0Z-kJI"/>
+                        <constraint firstItem="aOX-sv-meP" firstAttribute="centerX" secondItem="U3m-Hd-kNY" secondAttribute="centerX" id="bYU-sU-umC"/>
+                    </constraints>
+                </view>
+            </objects>
+            <point key="canvasLocation" x="-344.92753623188406" y="-86.383928571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chevron.backward" catalog="system" width="96" height="128"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

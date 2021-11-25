@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ImageAndNameCollectionCell" customModule="MovieeeRx" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="86" height="162"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="86" height="162"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YOC-4i-vme">
+                        <rect key="frame" x="0.0" y="77" width="49" height="19.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="YOC-4i-vme" secondAttribute="height" multiplier="5:2" id="wyM-G3-H3z"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
+                        <color key="textColor" red="0.92543441059999998" green="0.73400813340000004" blue="0.85711914300000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1OV-tI-6CM">
+                        <rect key="frame" x="0.0" y="0.0" width="49" height="73"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="20"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="YOC-4i-vme" firstAttribute="top" secondItem="1OV-tI-6CM" secondAttribute="bottom" constant="4" id="2wc-zH-KFL"/>
+                <constraint firstItem="1OV-tI-6CM" firstAttribute="width" secondItem="1OV-tI-6CM" secondAttribute="height" multiplier="2:3" id="Lzd-J2-Pig"/>
+                <constraint firstItem="YOC-4i-vme" firstAttribute="width" secondItem="1OV-tI-6CM" secondAttribute="width" id="U8U-R7-tml"/>
+                <constraint firstItem="1OV-tI-6CM" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="bdO-9e-g3W"/>
+                <constraint firstItem="YOC-4i-vme" firstAttribute="centerX" secondItem="1OV-tI-6CM" secondAttribute="centerX" id="bhN-Jf-gdN"/>
+                <constraint firstItem="1OV-tI-6CM" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="yo1-sc-LAH"/>
+            </constraints>
+            <size key="customSize" width="86" height="160"/>
+            <connections>
+                <outlet property="imageView" destination="1OV-tI-6CM" id="L9a-Zs-hIm"/>
+                <outlet property="nameLabel" destination="YOC-4i-vme" id="P6l-EQ-mjC"/>
+            </connections>
+            <point key="canvasLocation" x="27.536231884057973" y="50.223214285714285"/>
+        </collectionViewCell>
+    </objects>
+</document>

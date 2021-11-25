@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uyc-Ei-9Pr">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Category View Controller-->
+        <scene sceneID="KVI-dq-wQu">
+            <objects>
+                <viewController storyboardIdentifier="CategoryViewController" id="uyc-Ei-9Pr" customClass="CategoryViewController" customModule="MovieeeRx" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="a0H-iq-dMy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hhm-Ya-rXo">
+                                <rect key="frame" x="362" y="57" width="44" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="UoT-se-8Xi"/>
+                                    <constraint firstAttribute="width" constant="44" id="gQc-g1-u8b"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" backgroundImage="magnifyingglass" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24"/>
+                                </state>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7xy-pM-gnR">
+                                <rect key="frame" x="0.0" y="113" width="414" height="749"/>
+                                <color key="backgroundColor" red="0.090196078430000007" green="0.023529411760000001" blue="0.17254901959999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CATEGORIES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xIw-mq-otQ">
+                                <rect key="frame" x="16" y="62" width="168" height="31"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fud-DJ-MUz"/>
+                        <color key="backgroundColor" red="0.090852729980000005" green="0.0303259138" blue="0.16369917989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Hhm-Ya-rXo" secondAttribute="trailing" constant="8" id="2rS-rC-XDK"/>
+                            <constraint firstItem="Hhm-Ya-rXo" firstAttribute="top" secondItem="a0H-iq-dMy" secondAttribute="top" constant="56" id="Nxi-re-buk"/>
+                            <constraint firstItem="xIw-mq-otQ" firstAttribute="leading" secondItem="fud-DJ-MUz" secondAttribute="leading" constant="16" id="RiE-QC-5Mp"/>
+                            <constraint firstItem="xIw-mq-otQ" firstAttribute="top" secondItem="a0H-iq-dMy" secondAttribute="top" constant="62" id="Uuy-mj-ZEH"/>
+                            <constraint firstItem="fud-DJ-MUz" firstAttribute="bottom" secondItem="7xy-pM-gnR" secondAttribute="bottom" id="XbV-uB-nG9"/>
+                            <constraint firstItem="7xy-pM-gnR" firstAttribute="leading" secondItem="fud-DJ-MUz" secondAttribute="leading" id="ami-jH-zih"/>
+                            <constraint firstItem="7xy-pM-gnR" firstAttribute="top" secondItem="xIw-mq-otQ" secondAttribute="bottom" constant="20" id="dwQ-ec-BtV"/>
+                            <constraint firstItem="7xy-pM-gnR" firstAttribute="trailing" secondItem="fud-DJ-MUz" secondAttribute="trailing" id="gWH-3q-pVj"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="6l1-Gb-SLt"/>
+                    <connections>
+                        <outlet property="searchButton" destination="Hhm-Ya-rXo" id="Ji2-Ul-52Z"/>
+                        <outlet property="tableView" destination="7xy-pM-gnR" id="U3W-Z2-ECO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wng-MO-30l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-62.318840579710148" y="1478.5714285714284"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+    </resources>
+</document>

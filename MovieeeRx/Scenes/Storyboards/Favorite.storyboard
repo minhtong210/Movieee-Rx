@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2e7-cg-4gL">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Favorite View Controller-->
+        <scene sceneID="lIc-a6-4pL">
+            <objects>
+                <viewController storyboardIdentifier="FavoriteViewController" id="2e7-cg-4gL" customClass="FavoriteViewController" customModule="MovieeeRx" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HJ2-TK-JGO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FAVORITE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hxm-TJ-VZv">
+                                <rect key="frame" x="16" y="60" width="126.5" height="31"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="i5V-JT-OKy">
+                                <rect key="frame" x="0.0" y="111" width="414" height="751"/>
+                                <color key="backgroundColor" red="0.091015182439999995" green="0.009294928983" blue="0.17987787720000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="sectionIndexBackgroundColor" red="0.091015182439999995" green="0.009294928983" blue="0.17987787720000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BuY-bD-AEu">
+                                <rect key="frame" x="362" y="56" width="44" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="BuY-bD-AEu" secondAttribute="height" id="4TF-xw-SFK"/>
+                                    <constraint firstAttribute="width" constant="44" id="pRr-fm-vuZ"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" backgroundImage="magnifyingglass" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Bw5-xR-Jvd"/>
+                        <color key="backgroundColor" red="0.090937830509999998" green="0.0175697878" blue="0.1758125126" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="i5V-JT-OKy" firstAttribute="top" secondItem="hxm-TJ-VZv" secondAttribute="bottom" constant="20" id="4Xo-51-NkF"/>
+                            <constraint firstItem="i5V-JT-OKy" firstAttribute="leading" secondItem="Bw5-xR-Jvd" secondAttribute="leading" id="D7i-tt-4Dr"/>
+                            <constraint firstItem="hxm-TJ-VZv" firstAttribute="leading" secondItem="Bw5-xR-Jvd" secondAttribute="leading" constant="16" id="FGl-0g-qmR"/>
+                            <constraint firstItem="BuY-bD-AEu" firstAttribute="top" secondItem="HJ2-TK-JGO" secondAttribute="top" constant="55" id="FpD-HH-fJb"/>
+                            <constraint firstItem="Bw5-xR-Jvd" firstAttribute="trailing" secondItem="BuY-bD-AEu" secondAttribute="trailing" constant="8" id="Kge-OA-FaO"/>
+                            <constraint firstItem="i5V-JT-OKy" firstAttribute="bottom" secondItem="Bw5-xR-Jvd" secondAttribute="bottom" id="MNR-Hc-rtO"/>
+                            <constraint firstItem="hxm-TJ-VZv" firstAttribute="top" secondItem="HJ2-TK-JGO" secondAttribute="top" constant="60" id="igv-v4-NeO"/>
+                            <constraint firstItem="i5V-JT-OKy" firstAttribute="trailing" secondItem="Bw5-xR-Jvd" secondAttribute="trailing" id="nU6-oa-mnI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="searchButton" destination="BuY-bD-AEu" id="Lbx-yc-f1l"/>
+                        <outlet property="tableView" destination="i5V-JT-OKy" id="J6h-42-tRO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kmd-3I-pxf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="149.27536231884059" y="45.535714285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+    </resources>
+</document>

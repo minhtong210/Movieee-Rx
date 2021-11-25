@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cLp-pL-a6D">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="mdq-C8-Pgo">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" id="cLp-pL-a6D" customClass="HomeViewController" customModule="MovieeeRx" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7fz-7g-vCc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MOVIEEE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z4o-Rk-a8Z">
+                                <rect key="frame" x="16" y="62" width="118.5" height="31"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1jw-YG-hTw">
+                                <rect key="frame" x="0.0" y="113" width="414" height="700"/>
+                                <color key="backgroundColor" red="0.090196078430000007" green="0.023529411760000001" blue="0.17254901959999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="sectionIndexBackgroundColor" red="0.090881653130000004" green="0.026079839099999998" blue="0.1677393019" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rqS-sS-DBU">
+                                <rect key="frame" x="362" y="57" width="44" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="pSN-v2-xoq"/>
+                                    <constraint firstAttribute="width" constant="44" id="yEc-I6-C9r"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" backgroundImage="magnifyingglass" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="PPQ-5Z-UXp"/>
+                        <color key="backgroundColor" red="0.090852729980000005" green="0.0303259138" blue="0.16369917989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Z4o-Rk-a8Z" firstAttribute="top" secondItem="7fz-7g-vCc" secondAttribute="top" constant="62" id="0BW-DY-RPf"/>
+                            <constraint firstItem="1jw-YG-hTw" firstAttribute="trailing" secondItem="PPQ-5Z-UXp" secondAttribute="trailing" id="47N-Mc-puK"/>
+                            <constraint firstItem="PPQ-5Z-UXp" firstAttribute="trailing" secondItem="rqS-sS-DBU" secondAttribute="trailing" constant="8" id="8Fp-7A-iyQ"/>
+                            <constraint firstItem="1jw-YG-hTw" firstAttribute="top" secondItem="Z4o-Rk-a8Z" secondAttribute="bottom" constant="20" id="B11-mi-oky"/>
+                            <constraint firstItem="1jw-YG-hTw" firstAttribute="bottom" secondItem="PPQ-5Z-UXp" secondAttribute="bottom" id="IlC-Mm-EJ9"/>
+                            <constraint firstItem="1jw-YG-hTw" firstAttribute="leading" secondItem="PPQ-5Z-UXp" secondAttribute="leading" id="RYP-qD-N7W"/>
+                            <constraint firstItem="Z4o-Rk-a8Z" firstAttribute="leading" secondItem="PPQ-5Z-UXp" secondAttribute="leading" constant="16" id="a8u-Ms-SxX"/>
+                            <constraint firstItem="rqS-sS-DBU" firstAttribute="top" secondItem="7fz-7g-vCc" secondAttribute="top" constant="56" id="c5x-S9-7cq"/>
+                            <constraint firstItem="1jw-YG-hTw" firstAttribute="bottom" secondItem="PPQ-5Z-UXp" secondAttribute="bottom" id="mqU-yL-X00"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" leftItemsSupplementBackButton="YES" id="42A-WD-u2D"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="searchButton" destination="rqS-sS-DBU" id="IhF-wb-BTU"/>
+                        <outlet property="tableView" destination="1jw-YG-hTw" id="6yt-ez-pXs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8xG-s6-gpA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-894.20289855072474" y="1478.5714285714284"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+    </resources>
+</document>
